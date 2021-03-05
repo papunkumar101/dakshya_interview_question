@@ -21,9 +21,10 @@ Admin site:-https://hyperhome.cf/dakshya/admin.php
  
  i don't have computer/laptop so i'm using mobile to build this site.i don't know how it's look like in large divice . 
 ================================================================================
- used Tools Are:-Acode(text editor for android),Icode go(xampp for android)
+ used Tools Are:-Acode(text editor for android),Icode go(xampp for android) 
  #used languages are:-PHP,MYSQL
  Used framework:-Boostrap
+ SQL Buddy
  HTML
  CSS
  JS
