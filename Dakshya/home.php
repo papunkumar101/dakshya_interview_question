@@ -23,7 +23,7 @@ if(isset($_REQUEST["two"])){
 ?>
 <h4>Welcome <?php echo $_SESSION["name"]; ?>,</h4>
 <h6 class="text-center px-10"><em>Please Press Bellow Button After Into The Office And Out From The Office so That We Can Calculate Your Working Hour.</em></h6><hr>
-<form action="<? echo $_SERVER['PHP_SELF'];?>" method="post">
+<form action="" method="post">
   <?php if(isset($_SESSION["msg"])){
     echo $_SESSION["msg"];
     unset($_SESSION["msg"]);
