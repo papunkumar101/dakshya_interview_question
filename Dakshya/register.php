@@ -28,11 +28,11 @@ include("header.php");
     unset($_SESSION["msg"]);
     }
     ?>
-  <input class="mx-auto" type="text" name="name" placeholder="Name" style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;">
-  <input class="mx-auto" type="number" name="phone" placeholder="Phone No." style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;">
-  <input class="mx-auto" type="text" name="uid" placeholder="User ID" style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;">
-  <input class="mx-auto" type="Password" name="pass1" placeholder="Password" style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;">
-  <input class="mx-auto " type="Password" name="pass2" placeholder="Confirm Password" style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;">
+  <input class="mx-auto" type="text" name="name" placeholder="Name" style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;" required>
+  <input class="mx-auto" type="number" name="phone" placeholder="Phone No." style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;" required>
+  <input class="mx-auto" type="text" name="uid" placeholder="User ID" style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;" required>
+  <input class="mx-auto" type="Password" name="pass1" placeholder="Password" style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;" required>
+  <input class="mx-auto " type="Password" name="pass2" placeholder="Confirm Password" style=" border: 0; outline: 0;border-bottom: 2px solid black;background-color:#EBF5FB;display:block;margin-top:5px;padding:3px;" required>
   <div class="d-grid gap-2 col-6 mx-auto" style="margin-top:10px;margin-bottom:20px;">
   <button type="submit" name="register" class="btn btn-primary">Register</button>
   </div>
