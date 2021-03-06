@@ -1,6 +1,6 @@
 <?php
 include("config.php");
-if(isset($_REQUEST['id'])){
+if(isset($_SESSION["admin"])){
 include("header.php");
 
   
@@ -11,17 +11,25 @@ include("header.php");
   $pass2=$_REQUEST['pass2'];
   if(isset($_REQUEST['register'])){
     if($pass2===$pass1){
-    $sql4="INSERT INTO Employee(e_name,e_phone,e_uid,e_pass) VALUES('$name','$phone','$uid','$pass1')";
+      $sql8="SELECT * FROM employee WHERE e_uid='$uid'";
+      $result8=$conn->query($sql8);
+      if($result8->rowCount()<1){
+      
+    $sql4="INSERT INTO employee (e_name, e_phone, e_uid, e_pass) VALUES ('$name', '$phone', '$uid', '$pass1')";
     $conn->exec($sql4);
     $_SESSION["msg"]="<div class='alert alert-success' role='alert'>Succefully Registred.</div>";
+      }else{
+      $_SESSION["msg"]="<div class='alert alert-danger' role='alert'>User Already Exist.</div>";
+    }
     }else{
        $_SESSION["msg"]="<div class='alert alert-danger' role='alert'>Password Don't Match.</div>";
     echo "<script>window.location.replace('register.php')</script>";
     }
+    
 }
 ?>
 <h3 class="text-center" style="color:gray;"><strong>Register A New Employee </h3><hr>
-<form action="" method="post">
+<form action="" method="get">
   <div class="container text-center">
     <?php if(isset($_SESSION["msg"])){
     echo $_SESSION["msg"];
